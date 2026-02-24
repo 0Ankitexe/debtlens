@@ -1,0 +1,42 @@
+[package]
+name = "debtlens"
+version = "0.1.0"
+description = "DebtLens — Make technical debt visible, measurable, and actionable"
+authors = ["Ankit Bharti"]
+edition = "2021"
+repository = "https://github.com/0Ankitexe/debtlens"
+license = "MIT"
+
+[lib]
+name = "debtlens_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-opener = "2"
+tauri-plugin-dialog = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["full"] }
+rusqlite = { version = "0.31", features = ["bundled"] }
+git2 = "0.19"
+tree-sitter = "0.24"
+tree-sitter-typescript = "0.23"
+tree-sitter-javascript = "0.23"
+tree-sitter-python = "0.23"
+tree-sitter-go = "0.23"
+tree-sitter-rust = "0.23"
+tree-sitter-java = "0.23"
+notify = "7"
+notify-debouncer-mini = "0.5"
+uuid = { version = "1", features = ["v4"] }
+glob = "0.3"
+chrono = "0.4"
+log = "0.4"
+env_logger = "0.11"
+
+[dev-dependencies]
+tempfile = "3"

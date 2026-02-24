@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+dist/
+
+# Rust
+target/
+debug/
+release/
+*.rs.bk
+*.rlib
+
+# IDE
+.idea/
+*.iml
+.vscode/settings.json
+
+# OS
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+
+# Environment
+.env*
+*.log
+
+# Tech Debt Engine data
+.debtengine/
